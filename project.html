@@ -1,25 +1,21 @@
-<!DOCTYPE html>
 <html>
-<body>
-<h2>Javascript methods and loops</h2>
-<p>Numbers from 1 to 10</p>
-<!-- Added an ID to the second paragraph to display loop results inside it -->
-<p id="LoopsAndNumbers"></p> 
-
-<script>
-    var number = "";
-    // FIX: Changed '1<11' to 'i<11' so the loop runs correctly from 1 to 10
-    for (i = 1; i < 11; i++) { 
-        number += i + "<br>";
-    }
-    // Display the loop results inside the 'LoopsAndNumbers' paragraph
-    document.getElementById("LoopsAndNumbers").innerHTML = number;
-
-    // Display a random value and today's date
-    document.write("The random value is " + Math.floor(Math.random() * 100) + "<br>");
-    var date = new Date();
-    // FIX: Using toLocaleDateString() for better date formatting
-    document.write("Today's date is " + date.toLocaleDateString()); 
-</script>
-</body>
+    <head>
+        <body>
+            <button onclick="multiply(4)">Click Me!</button>
+            <p id="result"></p>
+            <script>
+                function multiply(a,b)
+                {
+                    if(b=== undefined)
+                {
+                    alert("The value of b is undefined");
+                    b=5;
+                    a=6;
+                }
+                var result=a*b;
+                document.getElementById("result").innerHTML=result;
+                }
+            </script>
+        </body>
+    </head>
 </html>
